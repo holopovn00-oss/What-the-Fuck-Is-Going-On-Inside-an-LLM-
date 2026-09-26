@@ -1,0 +1,377 @@
+{
+  "checked": "2026-09-26",
+  "scope": "Selected official documentation and primary research; article text and examples reviewed where noted.",
+  "sources": {
+    "cuda": {
+      "author": "NVIDIA",
+      "year": "документация, 2026",
+      "title": "CUDA Programming Guide",
+      "ru": "Руководство по программированию CUDA",
+      "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/",
+      "kind": "Документация",
+      "note": "Описаны устройство вычислительных блоков, пространства памяти, запуск ядер и программная модель CUDA. Термины помогают отделить локальность данных от паспортного числа операций в секунду.",
+      "where": "Programming Model; Understanding Memory; Features and Technical Specifications. Нарисовать путь данных от RAM до регистров.",
+      "group": "Вводные работы"
+    },
+    "roof": {
+      "author": "Williams, S.; Waterman, A.; Patterson, D.",
+      "year": "2009",
+      "title": "Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures",
+      "ru": "Roofline: модель верхних границ вычислений и обмена с памятью",
+      "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-134.html",
+      "kind": "Исследовательская статья",
+      "note": "Связывает достижимую производительность ядра с арифметической интенсивностью, пиком вычислений и пропускной способностью памяти. Даёт язык для гипотезы об узком месте, но не прогнозирует задержку целого сервиса.",
+      "where": "Разделы о модели и operational intensity; построить две границы для одной операции, указать допущения.",
+      "group": "Специализированные работы"
+    },
+    "flash": {
+      "author": "Dao, T. и др.",
+      "year": "2022",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "ru": "FlashAttention: точное внимание с учётом обмена между уровнями памяти",
+      "url": "https://papers.nips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html",
+      "kind": "NeurIPS",
+      "note": "Разбиение вычисления attention на блоки уменьшает движение данных между HBM и быстрой памятью GPU. Это пример ускорения без изменения математической цели attention; эффект зависит от формы задачи и реализации.",
+      "where": "Постановка IO-aware attention и раздел Algorithm; объяснить, какие промежуточные данные перестают записываться в HBM.",
+      "group": "Специализированные работы"
+    },
+    "best": {
+      "author": "NVIDIA",
+      "year": "документация, 2026",
+      "title": "CUDA C++ Best Practices Guide",
+      "ru": "Практическое руководство по производительности CUDA",
+      "url": "https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/",
+      "kind": "Документация",
+      "note": "Документация разбирает передачу данных, локальность, coalescing и профилирование. Полезна для понимания, почему фактическая пропускная способность ниже рекламируемой и когда загрузка GPU не означает эффективную работу.",
+      "where": "Data Transfer Between Host and Device; Memory Optimizations; Performance Metrics. Сравнить requested и actual bandwidth.",
+      "group": "Вводные работы"
+    },
+    "hf_cache": {
+      "author": "Hugging Face",
+      "year": "документация, 2026",
+      "title": "Caching",
+      "ru": "Кэширование ключей и значений при генерации",
+      "url": "https://huggingface.co/docs/transformers/en/kv_cache",
+      "kind": "Документация",
+      "note": "Показаны варианты KV-кэша и ограничения отдельных реализаций: динамическое размещение, статический кэш и перенос. Документация помогает проверить, применяется ли простая формула полного кэша к выбранной архитектуре.",
+      "where": "Introduction; Cache Types; Offloaded Cache. Выписать поддерживаемый тип для конкретного checkpoint.",
+      "group": "Вводные работы"
+    },
+    "paged": {
+      "author": "Kwon, W. и др.",
+      "year": "2023",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "ru": "PagedAttention: управление памятью при обслуживании LLM",
+      "url": "https://doi.org/10.1145/3600006.3613165",
+      "kind": "SOSP",
+      "note": "Работа вводит блочное размещение KV-кэша и показывает, как фрагментация и совместное использование влияют на пропускную способность обслуживания. Логическое число токенов и реально занятая физическая память различаются.",
+      "where": "§2 о проблеме памяти; §3 PagedAttention; §4 механизм vLLM и эксперименты.",
+      "group": "Специализированные работы"
+    },
+    "accelerate": {
+      "author": "Hugging Face",
+      "year": "документация, 2026",
+      "title": "Big Model Inference",
+      "ru": "Инференс моделей, не помещающихся целиком в ускоритель",
+      "url": "https://huggingface.co/docs/accelerate/usage_guides/big_modeling",
+      "kind": "Документация",
+      "note": "Разъясняет dispatch весов между GPU, RAM и диском. Такая выгрузка может сделать запуск возможным, но пропускная способность пути передачи меняет практическую скорость.",
+      "where": "Big Model Inference и описание device map; различить факт загрузки и измеренную скорость.",
+      "group": "Вводные работы"
+    },
+    "llama_quant": {
+      "author": "ggml-org",
+      "year": "документация, 2026",
+      "title": "Model files and quantization in llama.cpp",
+      "ru": "Файлы моделей и квантование в llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/models.md",
+      "kind": "Документация и код",
+      "note": "Описаны форматы моделей и варианты запуска. Обозначение четырёхбитной квантизации относится к конкретной схеме блоков и метаданных, поэтому размер файла не обязан равняться идеальным четырём битам на параметр.",
+      "where": "Разделы о GGUF, quantization и loading; сравнить размер файлов одинакового checkpoint в двух форматах.",
+      "group": "Специализированные работы"
+    },
+    "fsdp": {
+      "author": "PyTorch",
+      "year": "документация, 2026",
+      "title": "Getting Started with Fully Sharded Data Parallel (FSDP2)",
+      "ru": "Полное шардирование параметров, градиентов и оптимизатора",
+      "url": "https://docs.pytorch.org/tutorials/intermediate/FSDP_tutorial.html",
+      "kind": "Документация",
+      "note": "Разделяет репликацию модели и шардирование состояний обучения. Описаны коллективные операции, временное восстановление весов и компромисс между памятью и коммуникацией.",
+      "where": "Overview; How FSDP2 works; all-gather и reduce-scatter. Схематично изобразить один шаг на двух GPU.",
+      "group": "Вводные работы"
+    },
+    "zero": {
+      "author": "Rajbhandari, S. и др.",
+      "year": "2020",
+      "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+      "ru": "ZeRO: уменьшение памяти обучения разделением состояний",
+      "url": "https://sc20.supercomputing.org/proceedings/tech_paper/tech_paper_pages/pap379.html",
+      "kind": "SC20",
+      "note": "Авторы разбирают память оптимизатора, градиентов и параметров и этапы их разделения между процессами. Выигрыш памяти оплачивается обменом данными и зависит от топологии кластера.",
+      "where": "§2 о памяти состояний; §3 этапы ZeRO; проверить, что именно шардируется на каждом этапе.",
+      "group": "Специализированные работы"
+    },
+    "qlora": {
+      "author": "Dettmers, T. и др.",
+      "year": "2023",
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "ru": "QLoRA: эффективное дообучение квантованных LLM",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract-Conference.html",
+      "kind": "NeurIPS",
+      "note": "Замороженная квантованная база сочетается с обучаемыми низкоранговыми адаптерами. Работа объясняет экономию памяти и цену активаций; число параметров адаптера само по себе не определяет весь пик VRAM.",
+      "where": "§3 QLoRA, quantization и paged optimizers; §4 эксперименты. Восстановить состав памяти для одного шага.",
+      "group": "Специализированные работы"
+    },
+    "nccl": {
+      "author": "NVIDIA",
+      "year": "документация, 2026",
+      "title": "NCCL Developer Guide",
+      "ru": "Коллективные операции NCCL при распределённом обучении",
+      "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/overview.html",
+      "kind": "Документация",
+      "note": "Показывает коллективные операции и коммуникационные топологии между GPU. Для multi-GPU конфигурации скорость межсоединения и доступный набор маршрутов важны наряду с суммой VRAM.",
+      "where": "Overview и Collective Operations; сравнить all-reduce, all-gather и reduce-scatter для градиентов.",
+      "group": "Вводные работы"
+    },
+    "vllm": {
+      "author": "vLLM",
+      "year": "документация, 2026",
+      "title": "vLLM Documentation",
+      "ru": "Сервер инференса vLLM и его планировщик",
+      "url": "https://docs.vllm.ai/en/stable/",
+      "kind": "Документация и код",
+      "note": "Объединяет планирование запросов, управление KV-памятью и запуск сервера. Конкретные параметры зависят от версии; исходный runtime необходимо фиксировать вместе с измерениями.",
+      "where": "Serving и Configuration; проследить вход запроса до выделения KV-блоков и ответа.",
+      "group": "Вводные работы"
+    },
+    "benchmark": {
+      "author": "vLLM",
+      "year": "документация, 2026",
+      "title": "Benchmark CLI",
+      "ru": "Измерение времени первого токена и времени между токенами",
+      "url": "https://docs.vllm.ai/en/latest/benchmarking/cli/",
+      "kind": "Документация",
+      "note": "Документирует параметры генератора нагрузки и метрики TTFT, TPOT, throughput и задержки. Сопоставление машин требует одинаковой модели, распределения длин и интенсивности поступления запросов.",
+      "where": "Benchmark Serving и определения метрик; составить команду опыта с воспроизводимыми входными длинами.",
+      "group": "Вводные работы"
+    },
+    "distserve": {
+      "author": "Zhong, Y. и др.",
+      "year": "2024",
+      "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+      "ru": "DistServe: раздельное исполнение prefill и decode",
+      "url": "https://www.usenix.org/conference/osdi24/presentation/zhong-yinmin",
+      "kind": "OSDI",
+      "note": "Предлагается разместить фазы prefill и decode на разных группах GPU, чтобы уменьшить помехи и отдельно выбирать их параллелизм. Передача KV-состояния тоже имеет цену, поэтому результат зависит от нагрузки и сети.",
+      "where": "§2 анализ помех; §3 архитектура; §4 оптимизация размещения и измерения goodput.",
+      "group": "Фронтир исследований"
+    },
+    "pgvector": {
+      "author": "pgvector",
+      "year": "документация, 2026",
+      "title": "pgvector: Open-source vector similarity search for Postgres",
+      "ru": "Векторный поиск в PostgreSQL",
+      "url": "https://github.com/pgvector/pgvector",
+      "kind": "Документация и код",
+      "note": "Описаны точный поиск, HNSW и IVFFlat, типы векторов, индексы и SQL-фильтрация. Выбор индекса отражается на RAM, размере диска, времени построения и качестве поиска.",
+      "where": "Exact Search; HNSW; IVFFlat; Filtering. Замерить recall относительно точной выдачи после фильтра.",
+      "group": "Вводные работы"
+    },
+    "hnsw": {
+      "author": "Malkov, Y. A.; Yashunin, D. A.",
+      "year": "2016",
+      "title": "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs",
+      "ru": "HNSW: приближённый поиск по иерархическому графу близости",
+      "url": "https://arxiv.org/abs/1603.09320",
+      "kind": "Исследовательская статья",
+      "note": "Иерархический граф позволяет быстро находить кандидатов, меняя время и память на достигаемую полноту. Векторный индекс хранит связи между точками помимо самих чисел вектора.",
+      "where": "§3 построение и поиск; §4 эксперименты. Сравнить стоимость индекса и recall с точным поиском.",
+      "group": "Специализированные работы"
+    },
+    "pitr": {
+      "author": "PostgreSQL Global Development Group",
+      "year": "документация, 2026",
+      "title": "Continuous Archiving and Point-in-Time Recovery (PITR)",
+      "ru": "Непрерывное архивирование и восстановление базы на момент времени",
+      "url": "https://www.postgresql.org/docs/current/continuous-archiving.html",
+      "kind": "Документация",
+      "note": "Резервная копия и журнал WAL позволяют восстановить согласованное состояние. Для RAG надо также согласовать версию исходного документа, фрагментов, эмбеддингов и индекса.",
+      "where": "Setting Up WAL Archiving; Making a Base Backup; Recovering. Провести пробное восстановление на отдельном узле.",
+      "group": "Специализированные работы"
+    },
+    "irbook": {
+      "author": "Manning, C. D.; Raghavan, P.; Schütze, H.",
+      "year": "2008",
+      "title": "Introduction to Information Retrieval",
+      "ru": "Введение в информационный поиск",
+      "url": "https://nlp.stanford.edu/IR-book/",
+      "kind": "Учебник",
+      "note": "Объясняет инвертированные индексы, ранжирование и оценку поиска. Качество RAG начинается с выбора релевантных фрагментов, а не с объёма VRAM генератора.",
+      "where": "Главы 1, 6 и 8: индекс, ранжирование и оценка; задать тестовый набор запросов.",
+      "group": "Вводные работы"
+    },
+    "llama": {
+      "author": "ggml-org",
+      "year": "документация, 2026",
+      "title": "llama.cpp",
+      "ru": "llama.cpp: локальный запуск и сервер моделей",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "kind": "Документация и код",
+      "note": "Проект показывает локальный запуск CPU/GPU, частичную выгрузку, сервер и параметры контекста. Наличие backend не гарантирует поддержки каждой новой архитектуры или одинаковой скорости.",
+      "where": "README, build instructions и server README; запустить один точный checkpoint с фиксированной версией.",
+      "group": "Вводные работы"
+    },
+    "mlx": {
+      "author": "Apple ML Explore",
+      "year": "документация, 2026",
+      "title": "MLX",
+      "ru": "MLX: вычисления на Apple Silicon",
+      "url": "https://github.com/ml-explore/mlx",
+      "kind": "Документация и код",
+      "note": "Описывает стек для CPU и GPU Apple Silicon с общей памятью и собственным API. Общая память упрощает размещение, но не отменяет ограничения ёмкости, bandwidth или конкуренцию процессов.",
+      "where": "README и документация о device/arrays; измерить память приложения и скорость устойчивой генерации.",
+      "group": "Специализированные работы"
+    },
+    "rocm": {
+      "author": "AMD",
+      "year": "документация, 2026",
+      "title": "ROCm Compatibility Matrix",
+      "ru": "Матрица совместимости ROCm",
+      "url": "https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html",
+      "kind": "Документация",
+      "note": "Матрица сопоставляет устройства, операционные системы и версии программного стека. Проверять нужно конкретные GPU и runtime, а не только надпись о наличии поддержки ROCm.",
+      "where": "GPU, OS and framework support для выбранной версии; отметить проверенные и неподтверждённые сочетания.",
+      "group": "Вводные работы"
+    },
+    "cards": {
+      "author": "Hugging Face",
+      "year": "документация, 2026",
+      "title": "Model Cards",
+      "ru": "Карточки моделей: лицензия, назначение и ограничения",
+      "url": "https://huggingface.co/docs/hub/model-cards",
+      "kind": "Документация",
+      "note": "Карточка связывает веса с задачей, происхождением, условиями использования и известными ограничениями. Перед локальным запуском нужно установить точный checkpoint, шаблон диалога и применимую лицензию.",
+      "where": "Overview и metadata; прочитать карточку именно выбранной ревизии, затем сравнить с конфигурацией tokenizer.",
+      "group": "Вводные работы"
+    },
+    "cap": {
+      "author": "NVIDIA",
+      "year": "документация, 2026",
+      "title": "CUDA GPU Compute Capability",
+      "ru": "Вычислительные возможности GPU NVIDIA",
+      "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/05-appendices/compute-capabilities.html",
+      "kind": "Документация",
+      "note": "Возможности чипа связаны с набором операций и поддержкой форматов. Два ускорителя с одинаковой ёмкостью VRAM могут по-разному исполнять нужные ядра и поддерживаться фреймворком.",
+      "where": "Таблицы compute capability и feature support; проверить архитектуру своего GPU до установки runtime.",
+      "group": "Вводные работы"
+    },
+    "prof": {
+      "author": "PyTorch",
+      "year": "документация, 2026",
+      "title": "PyTorch Profiler",
+      "ru": "Профилирование вычислений и памяти в PyTorch",
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
+      "kind": "Документация",
+      "note": "Профайлер помогает увидеть время операций, перемещение CPU/GPU и выделения памяти. Показатели нужны для проверки гипотезы об узком месте, прежде чем менять аппаратную часть.",
+      "where": "Profiler API; измерить три одинаковых запроса после прогрева и сопоставить CPU с GPU.",
+      "group": "Вводные работы"
+    },
+    "memory": {
+      "author": "PyTorch",
+      "year": "документация, 2026",
+      "title": "Understanding CUDA Memory Usage",
+      "ru": "Понимание расхода памяти CUDA",
+      "url": "https://docs.pytorch.org/docs/stable/torch_cuda_memory",
+      "kind": "Документация",
+      "note": "Инструменты snapshot и память allocator позволяют отделить выделенные тензоры, зарезервированную память и пики. Не каждая внешняя аллокация видна одному инструменту.",
+      "where": "Recording memory history; Visualizing snapshots; проверить видимость внешних аллокаций.",
+      "group": "Вводные работы"
+    },
+    "mlperf": {
+      "author": "MLCommons",
+      "year": "документация, 2026",
+      "title": "MLPerf Inference",
+      "ru": "MLPerf Inference: сценарии и сопоставимые измерения",
+      "url": "https://mlcommons.org/benchmarks/inference-datacenter/",
+      "kind": "Бенчмарк и правила",
+      "note": "Набор задаёт сценарии измерений и ограничения для сравнения систем. Опубликованный результат полезен для ориентира лишь при сопоставимой задаче, модели, точности и настройке системы.",
+      "where": "Scenarios, rules and results; перечислить, что расходится с собственной нагрузкой.",
+      "group": "Специализированные работы"
+    }
+  },
+  "sections": [
+    {
+      "title": "Железо для ИИ: от задачи к конфигурации",
+      "sources": [
+        "cuda",
+        "best",
+        "roof",
+        "flash"
+      ]
+    },
+    {
+      "title": "1. Архитектура узла и иерархия памяти",
+      "sources": [
+        "cuda",
+        "best",
+        "roof",
+        "flash"
+      ]
+    },
+    {
+      "title": "2. Сколько памяти требует модель",
+      "sources": [
+        "hf_cache",
+        "accelerate",
+        "paged",
+        "llama_quant"
+      ]
+    },
+    {
+      "title": "3. Обучение и дообучение: от узла к кластеру",
+      "sources": [
+        "fsdp",
+        "nccl",
+        "zero",
+        "qlora"
+      ]
+    },
+    {
+      "title": "4. Инференс: от одного запроса к сервису",
+      "sources": [
+        "vllm",
+        "benchmark",
+        "paged",
+        "distserve"
+      ]
+    },
+    {
+      "title": "5. Данные, индексы и базы для RAG",
+      "sources": [
+        "irbook",
+        "pgvector",
+        "hnsw",
+        "pitr"
+      ]
+    },
+    {
+      "title": "6. Локальные модели: от SLM до LLM",
+      "sources": [
+        "cards",
+        "llama",
+        "rocm",
+        "mlx"
+      ]
+    },
+    {
+      "title": "7. Выбор компонентов и контрольный практикум",
+      "sources": [
+        "cap",
+        "prof",
+        "memory",
+        "mlperf"
+      ]
+    }
+  ]
+}

@@ -18,8 +18,8 @@
     },
     {
       "path": "STATUS.md",
-      "bytes": 3018,
-      "sha256": "616711901847874ff8f3b4d3815a65e9791334bca782dbbfe421efa50b39ca36"
+      "bytes": 3011,
+      "sha256": "7560ac23a7323fa9f214ca137a0090b075393af2651f3dbbc37a8dc1a36f2afe"
     },
     {
       "path": "archive/chapter_builds/README.md",
@@ -158,13 +158,13 @@
     },
     {
       "path": "docs/issues/01_hardware/README.md",
-      "bytes": 1940,
-      "sha256": "290d5a3c81081e03a150d421e3d8174ac14212979946cff5982fff000f4b0e5b"
+      "bytes": 1721,
+      "sha256": "5ad7ac8dc2ed758aead6157056d007d271d8ff658fa8fba7d7416f897a130599"
     },
     {
       "path": "docs/issues/01_hardware/build_pdf.py",
-      "bytes": 140,
-      "sha256": "cb69a583a882d59ceb7562a7f131048e2c91e6846ecd03ac8ec725ccd50d1bdc"
+      "bytes": 158,
+      "sha256": "7d601bfb01a5e5f93f78cb50c72887a88968db04c68f71fb9c40a3ed65c8a075"
     },
     {
       "path": "docs/issues/01_hardware/calculator.py",
@@ -172,14 +172,19 @@
       "sha256": "9f26cb54894f5631ccb1c098449538de59c943ef5f0542c5df0b0ff115349d43"
     },
     {
+      "path": "docs/issues/01_hardware/hardware_content.py",
+      "bytes": 100841,
+      "sha256": "57a18e3a54001af4b06f8ae1d50054001b253674d759adfa766c19c01ffc1ac3"
+    },
+    {
       "path": "docs/issues/01_hardware/hardware_issue.md",
-      "bytes": 36462,
-      "sha256": "2ab9c11c5e1b880cdb2027759086645add05e4966af0962c84676c561b2bbdf2"
+      "bytes": 105631,
+      "sha256": "cafaa910985d70abf75393f246556e5b8994f3a4ae62cb40a647577f47820590"
     },
     {
       "path": "docs/issues/01_hardware/hardware_issue.pdf",
-      "bytes": 97936,
-      "sha256": "8e12e77b7884a2f434c7fdc569611ae2fea7fade5963c2c4b99665830820e744"
+      "bytes": 144528,
+      "sha256": "5b040c5cdf4989762aa9270bc08ed2560040a3e42b4f3b438c6d3df0d9b5a7dd"
     },
     {
       "path": "docs/issues/01_hardware/requirements.txt",
@@ -188,13 +193,23 @@
     },
     {
       "path": "docs/issues/01_hardware/review_log.md",
-      "bytes": 3385,
-      "sha256": "c9e7598390b3e0d9036ce55f53afe1a921b38c423e537b88fd892435263bd06e"
+      "bytes": 6520,
+      "sha256": "31e8758d27856bc003bad7941ba96c628c0cc5976192a6dfad9a790e02ef04b2"
+    },
+    {
+      "path": "docs/issues/01_hardware/sources.json",
+      "bytes": 27285,
+      "sha256": "6d017309a8adb45b489bd72794b43df01a579ffa02dccc43218e0478da48fe94"
     },
     {
       "path": "docs/issues/01_hardware/typeset_book.py",
       "bytes": 14492,
       "sha256": "547f646f1b4569018d3f3a658500308a03c46d939b54406837a5510d0d2d60ca"
+    },
+    {
+      "path": "docs/issues/01_hardware/typeset_reference.py",
+      "bytes": 12027,
+      "sha256": "f42ef4baa17741162370279db3b3fa306d79fed2ee77860212f078d38e4c0099"
     },
     {
       "path": "docs/issues/01_hardware/workload_example.json",
@@ -203,8 +218,8 @@
     },
     {
       "path": "docs/issues/README.md",
-      "bytes": 325,
-      "sha256": "2748b9f096f696ee89e36b4e57b3ed16e4985a8dfd8dc0af9f1159e72361c8f8"
+      "bytes": 348,
+      "sha256": "1d96ce1f8c1693c545d58c1855d22202e472c25ef11e071860be238c29e9360e"
     },
     {
       "path": "docs/usage/usage_route.md",

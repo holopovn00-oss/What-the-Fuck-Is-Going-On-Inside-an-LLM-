@@ -1,7 +1,7 @@
-"""Rebuild the hardware PDF in the approved Atlas chapter layout."""
+"""Build the current hardware issue and its companion Markdown/source index."""
 
-from typeset_book import main
+from typeset_reference import build
 
 
 if __name__ == "__main__":
-    main()
+    build()
