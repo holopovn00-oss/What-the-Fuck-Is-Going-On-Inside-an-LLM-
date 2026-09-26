@@ -13,13 +13,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4839,
-      "sha256": "5a8747a543562699e655812ec0096c14a1419a32ca9f72b52cadacb3165f0b14"
+      "bytes": 5089,
+      "sha256": "79cab167961dc1463c38b17d54574c9e30fe109d59ffce97b5fd347f56b66c34"
     },
     {
       "path": "STATUS.md",
-      "bytes": 3172,
-      "sha256": "e1d59c5be7112f47d9a2884f6002b593719bb699c9bec44f8736ac6e4a091ddb"
+      "bytes": 3432,
+      "sha256": "efcf5127e9df920bdd72246f293c6e4c46dc50d396ddc4a5597ca97bf9c11f68"
     },
     {
       "path": "archive/chapter_builds/README.md",
@@ -158,8 +158,8 @@
     },
     {
       "path": "docs/issues/01_hardware/README.md",
-      "bytes": 1876,
-      "sha256": "12bb7d829250df35fbbaa939642910ec76e7cb9f4f47acd00720e23ca0cb61b5"
+      "bytes": 2077,
+      "sha256": "9bd38eb61facca899c0de90e5ec5fb2b4da8797057d4c50e402f40aafa6a69ce"
     },
     {
       "path": "docs/issues/01_hardware/build_pdf.py",
@@ -193,8 +193,8 @@
     },
     {
       "path": "docs/issues/01_hardware/review_log.md",
-      "bytes": 8493,
-      "sha256": "8dd571b11386ded4a29eb6596ac86b9fef8f7e24d1d2d8b68160d864c1a04467"
+      "bytes": 8725,
+      "sha256": "2ec028ec901ef2e95747b110d1334214568ad5437e95af4c378a0b7cbedb0225"
     },
     {
       "path": "docs/issues/01_hardware/sources.json",
@@ -220,6 +220,26 @@
       "path": "docs/issues/README.md",
       "bytes": 348,
       "sha256": "1d96ce1f8c1693c545d58c1855d22202e472c25ef11e071860be238c29e9360e"
+    },
+    {
+      "path": "docs/standards/atlas_golden_gate/GOLDEN_GATE.md",
+      "bytes": 15744,
+      "sha256": "176dd88e25fdaaf00c240e3a5e59749dbdaae7f7bae6814378a938b856993274"
+    },
+    {
+      "path": "docs/standards/atlas_golden_gate/REVIEW_FORM.md",
+      "bytes": 5920,
+      "sha256": "a947e6cf0514691223363930d7e03ab9e85d014f3e1970ec2e04fa00c91be693"
+    },
+    {
+      "path": "docs/standards/atlas_golden_gate/gate.py",
+      "bytes": 10014,
+      "sha256": "729a40e828b024ab124d98450ff649462b52f983b32c640bba99fd889c3b4a3b"
+    },
+    {
+      "path": "docs/standards/atlas_golden_gate/reference_profile.json",
+      "bytes": 2392,
+      "sha256": "64c91ddc2296284cd3acc3443f4cf1675eaf97b64a4e15fe97a4396d79af3a92"
     },
     {
       "path": "docs/usage/usage_route.md",
@@ -370,6 +390,11 @@
       "path": "notes/26_gold_standard_deep_read.md",
       "bytes": 9720,
       "sha256": "84cc5c1bd16b09372a26ea7a6f56056f4af928671e0cbe4fc8e181f1be8213bb"
+    },
+    {
+      "path": "notes/27_golden_gate_decision.md",
+      "bytes": 2842,
+      "sha256": "1f1fb049fa0ffaf434c2b87e9f1dfe3a62a2e8daf436e26621e91936dd961aa6"
     },
     {
       "path": "research/conferences/papers.json",

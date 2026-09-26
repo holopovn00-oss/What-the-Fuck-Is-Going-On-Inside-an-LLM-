@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "reference_path_from_repo": "docs/chapters/deep-research/chapter.pdf",
+  "reference_sha256": "d6d94f4523e20c191b41bad274b2bebd175f403dda8172c936dd30199564d4c5",
+  "title": "Архитектура Deep Research и научного соисследователя",
+  "page_size_pt": [595.28, 841.89],
+  "units": 8,
+  "pattern": ["first_article", "second_article", "local_bibliography"],
+  "article_geometry_pt": {
+    "left_rule_x": 41.0,
+    "top_rule_y": 56.4,
+    "bottom_rule_y": 804.6,
+    "sidebar_rule_x": 404.2,
+    "main_text_x": 48.2,
+    "sidebar_text_x": 416.5,
+    "content_right_x": 549.9
+  },
+  "bibliography_geometry_pt": {
+    "title_y": 65.1,
+    "rule_y": 102.3,
+    "rule_x0": 134.4,
+    "rule_x1": 460.9,
+    "entry_x": 70.9,
+    "continuation_x": 85.5,
+    "first_group_y": 121.5,
+    "first_entry_y": 150.3
+  },
+  "fonts": {
+    "article_body": ["SourceSerif4-Regular", 10.5],
+    "article_subhead": ["SourceSerif4-Bold", 11.0],
+    "article_lead": ["SourceSerif4-Regular", 11.5],
+    "sidebar_body": ["NimbusSans-Regular", 9.0],
+    "sidebar_subhead": ["NimbusSans-Bold", 9.0],
+    "bibliography_body": ["SourceSerif4-Regular", 10.5],
+    "bibliography_title_italic": ["SourceSerif4-It", 10.5]
+  },
+  "reference_units": [
+    {"pages": [1, 2, 3], "role": "Введение", "sources": 4},
+    {"pages": [4, 5, 6], "role": "Поиск, декомпозиция и остановка", "sources": 4},
+    {"pages": [7, 8, 9], "role": "Свидетельства, происхождение и цитаты", "sources": 3},
+    {"pages": [10, 11, 12], "role": "Оркестрация, инструменты и память", "sources": 4},
+    {"pages": [13, 14, 15], "role": "Гипотезы, критика и поддакивание", "sources": 4},
+    {"pages": [16, 17, 18], "role": "Эксперимент и полный научный цикл", "sources": 4},
+    {"pages": [19, 20, 21], "role": "Как оценивать исследовательского агента", "sources": 4},
+    {"pages": [22, 23, 24], "role": "Обучение и улучшение управляющей политики", "sources": 4}
+  ],
+  "local_bibliography_entries": 31,
+  "distinct_source_urls": 24,
+  "description": "Measured from the user's exact PDF. This profile is a physical reference, not an automatic test of intellectual quality."
+}
