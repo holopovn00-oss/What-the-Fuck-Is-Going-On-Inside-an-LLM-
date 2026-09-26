@@ -18,8 +18,8 @@
     },
     {
       "path": "STATUS.md",
-      "bytes": 3011,
-      "sha256": "7560ac23a7323fa9f214ca137a0090b075393af2651f3dbbc37a8dc1a36f2afe"
+      "bytes": 3172,
+      "sha256": "e1d59c5be7112f47d9a2884f6002b593719bb699c9bec44f8736ac6e4a091ddb"
     },
     {
       "path": "archive/chapter_builds/README.md",
@@ -158,8 +158,8 @@
     },
     {
       "path": "docs/issues/01_hardware/README.md",
-      "bytes": 1721,
-      "sha256": "5ad7ac8dc2ed758aead6157056d007d271d8ff658fa8fba7d7416f897a130599"
+      "bytes": 1876,
+      "sha256": "12bb7d829250df35fbbaa939642910ec76e7cb9f4f47acd00720e23ca0cb61b5"
     },
     {
       "path": "docs/issues/01_hardware/build_pdf.py",
@@ -173,18 +173,18 @@
     },
     {
       "path": "docs/issues/01_hardware/hardware_content.py",
-      "bytes": 100841,
-      "sha256": "57a18e3a54001af4b06f8ae1d50054001b253674d759adfa766c19c01ffc1ac3"
+      "bytes": 113230,
+      "sha256": "1c77e881198ba98f7198bcd6941dd76728b2f41c2c3105471f1bbaa1893eba0a"
     },
     {
       "path": "docs/issues/01_hardware/hardware_issue.md",
-      "bytes": 105631,
-      "sha256": "cafaa910985d70abf75393f246556e5b8994f3a4ae62cb40a647577f47820590"
+      "bytes": 118560,
+      "sha256": "ed9673b0381d2fd478fcc52bb68038fc6ff9f0226b5ee053a3ac2903e2c38d36"
     },
     {
       "path": "docs/issues/01_hardware/hardware_issue.pdf",
-      "bytes": 144528,
-      "sha256": "5b040c5cdf4989762aa9270bc08ed2560040a3e42b4f3b438c6d3df0d9b5a7dd"
+      "bytes": 158229,
+      "sha256": "bca96d0419e4aa7a2d4633a8f494b533286c83fecbf470e09bc73ab649391353"
     },
     {
       "path": "docs/issues/01_hardware/requirements.txt",
@@ -193,13 +193,13 @@
     },
     {
       "path": "docs/issues/01_hardware/review_log.md",
-      "bytes": 6520,
-      "sha256": "31e8758d27856bc003bad7941ba96c628c0cc5976192a6dfad9a790e02ef04b2"
+      "bytes": 8493,
+      "sha256": "8dd571b11386ded4a29eb6596ac86b9fef8f7e24d1d2d8b68160d864c1a04467"
     },
     {
       "path": "docs/issues/01_hardware/sources.json",
-      "bytes": 27285,
-      "sha256": "6d017309a8adb45b489bd72794b43df01a579ffa02dccc43218e0478da48fe94"
+      "bytes": 29006,
+      "sha256": "d35f96fbf24b3c7b4279706d295bd14760932fa482d51e895136da260bf6132e"
     },
     {
       "path": "docs/issues/01_hardware/typeset_book.py",
@@ -208,8 +208,8 @@
     },
     {
       "path": "docs/issues/01_hardware/typeset_reference.py",
-      "bytes": 12027,
-      "sha256": "f42ef4baa17741162370279db3b3fa306d79fed2ee77860212f078d38e4c0099"
+      "bytes": 12946,
+      "sha256": "8126176ec60cacf41bf062a8f39ea5d140ce5e42314932d8fb11525ab56ce75e"
     },
     {
       "path": "docs/issues/01_hardware/workload_example.json",
@@ -298,8 +298,8 @@
     },
     {
       "path": "notes/12_atlas_design_standard.md",
-      "bytes": 4889,
-      "sha256": "3ea9e00da3871ca9e309ad4c9cfacbf270b6d5b3208408d004395b4e809dba73"
+      "bytes": 6196,
+      "sha256": "0207102ba81eba4ff8d1e6622aaab52fa0e96fbb2c67f8d71a0f57c28e4ac471"
     },
     {
       "path": "notes/13_agents_chapter_log.md",
@@ -365,6 +365,11 @@
       "path": "notes/25_hardware_reference_audit.md",
       "bytes": 6529,
       "sha256": "46da94582fc47c32b7af352290f7318198805421062da69ca41ff8be3bddd720"
+    },
+    {
+      "path": "notes/26_gold_standard_deep_read.md",
+      "bytes": 9720,
+      "sha256": "84cc5c1bd16b09372a26ea7a6f56056f4af928671e0cbe4fc8e181f1be8213bb"
     },
     {
       "path": "research/conferences/papers.json",

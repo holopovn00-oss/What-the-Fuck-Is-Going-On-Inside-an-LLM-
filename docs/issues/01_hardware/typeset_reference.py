@@ -82,8 +82,20 @@ def work_links(text, references):
 def markdown(text, references):
     text = re.sub(r"\\work\{([^{}]+)\}\{([^{}]+)\}",
                   lambda m: f"[{m[2]}]({S[m[1]]['url']}) [{references.index(m[1])+1}]", text)
+    def table(match):
+        rows = [[cell.strip() for cell in row.split("&")]
+                for row in match[1].strip().split(r"\\") if row.strip()]
+        assert rows and all(len(row) == len(rows[0]) for row in rows)
+        return ("\n\n| " + " | ".join(rows[0]) + " |\n"
+                + "|" + "|".join("---" for _ in rows[0]) + "|\n"
+                + "\n".join("| " + " | ".join(row) + " |" for row in rows[1:])
+                + "\n\n")
+    text = re.sub(
+        r"\\begin\{center\}\\begin\{tabular\}\{rcc\}(.*?)\\end\{tabular\}\\end\{center\}",
+        table, text, flags=re.S)
     text = re.sub(r"\\(subhead|sidehead)\{([^{}]+)\}", r"\n### \2\n\n", text)
     text = re.sub(r"\\step\{([^{}]+)\}", r"\n**\1** ", text)
+    text = re.sub(r"\\hyperlink\{topic[0-9]+\}\{([^{}]+)\}", r"\1", text)
     text = text.replace(r"\emph{", "*").replace(r"\textbf{", "**")
     # All emphasis in source is one-level text without nested braces.
     text = re.sub(r"\*([^{}\n]+)\}", r"*\1*", text)
@@ -108,10 +120,11 @@ def bibliography(index, chapter):
     previous = None
     for number, key in enumerate(chapter["refs"], 1):
         item = S[key]
-        if item["group"] != previous:
+        level = "Вводные работы" if index == 0 else item["group"]
+        if level != previous:
             lines.append(r"\Needspace{120pt}\vspace{8pt}{\centering\fontsize{9.5}{12}\selectfont\addfontfeatures{LetterSpace=4}"
-                         + item["group"].upper() + r"\par}\vspace{10pt}")
-            previous = item["group"]
+                         + level.upper() + r"\par}\vspace{10pt}")
+            previous = level
         original = (str(number) + r".\enspace " + esc(item["author"]) + " ("
                     + esc(item["year"]) + r"), \href{" + item["url"]
                     + r"}{\textit{" + esc(item["title"]) + "}}. " + esc(item["kind"]) + ".")
@@ -152,16 +165,20 @@ def build():
                 md.append("\n## " + chapter["title"] + "\n\n" + chapter["lead"] + "\n")
             parts.append(r"\columns{" + work_links(page["main"], refs) + "}{"
                          + work_links(page["side"], refs) + "}")
-            md.append("\n" + markdown(page["main"], refs) + "\n\n> "
-                      + markdown(page["side"], refs).replace("\n", "\n> ") + "\n")
+            side = markdown(page["side"], refs)
+            quoted_side = "\n".join("> " + line if line else ">"
+                                    for line in side.splitlines())
+            md.append("\n" + markdown(page["main"], refs) + "\n\n"
+                      + quoted_side + "\n")
         parts.append(bibliography(index, chapter))
         md.append("\n### Библиография\n")
         last = None
         for number, key in enumerate(refs, 1):
             item = S[key]
-            if item["group"] != last:
-                md.append("\n#### " + item["group"] + "\n")
-                last = item["group"]
+            level = "Вводные работы" if index == 0 else item["group"]
+            if level != last:
+                md.append("\n#### " + level + "\n")
+                last = level
             md.append(f"\n{number}. {item['author']} ({item['year']}), *[{item['title']}]({item['url']})*. {item['kind']}.\n\n"
                       f"   {item['ru']}\n\n   {item['note']}\n\n   *Что читать.* {item['where']}\n")
         md.append("\n**Порядок чтения.** " + chapter["route"] + "\n")
