@@ -18,8 +18,8 @@
     },
     {
       "path": "STATUS.md",
-      "bytes": 2862,
-      "sha256": "603ccd764bb2354b7efdd2714a8c90d640b51b8804883ef1ec93c0ec49d96234"
+      "bytes": 3018,
+      "sha256": "616711901847874ff8f3b4d3815a65e9791334bca782dbbfe421efa50b39ca36"
     },
     {
       "path": "archive/chapter_builds/README.md",
@@ -158,8 +158,8 @@
     },
     {
       "path": "docs/issues/01_hardware/README.md",
-      "bytes": 1485,
-      "sha256": "148361e223045472e0a21b930c0e8946c761dd8f023bcb586cbf73d3fefec6ff"
+      "bytes": 1940,
+      "sha256": "290d5a3c81081e03a150d421e3d8174ac14212979946cff5982fff000f4b0e5b"
     },
     {
       "path": "docs/issues/01_hardware/build_pdf.py",
@@ -203,8 +203,8 @@
     },
     {
       "path": "docs/issues/README.md",
-      "bytes": 246,
-      "sha256": "058f5fcbe85fa6ed74d2ee8950399518247fb749d6d3407d88579402271cc021"
+      "bytes": 325,
+      "sha256": "2748b9f096f696ee89e36b4e57b3ed16e4985a8dfd8dc0af9f1159e72361c8f8"
     },
     {
       "path": "docs/usage/usage_route.md",
@@ -345,6 +345,11 @@
       "path": "notes/24_hardware_layout_correction.md",
       "bytes": 1847,
       "sha256": "6b97a460776665e7703443ee781e5e4e1ff632312691e08cc2c6c9d5721e052d"
+    },
+    {
+      "path": "notes/25_hardware_reference_audit.md",
+      "bytes": 6529,
+      "sha256": "46da94582fc47c32b7af352290f7318198805421062da69ca41ff8be3bddd720"
     },
     {
       "path": "research/conferences/papers.json",

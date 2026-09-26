@@ -1,5 +1,7 @@
 # Выпуск 01: железо для ИИ
 
+**Статус: отклонённый черновик.** Опубликованный PDF не соответствует утверждённой композиции и глубине главы. Использовать его как пример готового выпуска нельзя. Эталон — `docs/chapters/deep-research/chapter.pdf`; разбор расхождений сохранён в `notes/25_hardware_reference_audit.md`.
+
 - [Глава Markdown](hardware_issue.md)
 - [PDF](hardware_issue.pdf)
 - [Шаблон нагрузки](workload_example.json)
