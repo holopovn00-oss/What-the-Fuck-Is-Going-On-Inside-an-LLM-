@@ -1,4 +1,4 @@
-# Статус Атласа
+# Статус «What the Fuck Is Going On Inside an LLM?»
 
 Актуально на 26 сентября 2026 года.
 

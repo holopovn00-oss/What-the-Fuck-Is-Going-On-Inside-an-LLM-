@@ -282,7 +282,7 @@ summary = (f"Редакция 4.0 · 26 сентября 2026\n\n"
     "Это содержание и план опытов. Числа из практикума — приблизительная арифметика весов, "
     "а не список гарантированно запускаемых моделей. Утверждения и версия программного стека "
     "уточняются по документации и контрольному запуску.\n")
-md = ["# Атлас искусственного интеллекта: единое содержание\n", summary]
+md = ["# What the Fuck Is Going On Inside an LLM?\n\nАтлас · единое содержание\n", summary]
 for b in blocks:
     md.append("\n## " + b["title"] + "\n")
     for c in b["chapters"]:
@@ -338,13 +338,14 @@ tex = [r"""\documentclass[11pt,a4paper]{article}
 \setdefaultlanguage{russian}
 \setmainfont{SourceSerif4-Regular.otf}[Path=FONT/,BoldFont=SourceSerif4-Bold.otf,ItalicFont=SourceSerif4-It.otf]
 \usepackage[hidelinks,bookmarksopen=true]{hyperref}
-\pagestyle{fancy}\fancyhf{}\fancyfoot[L]{\small Атлас / Единое содержание · 4.0}\fancyfoot[R]{\thepage}
+\hypersetup{pdftitle={What the Fuck Is Going On Inside an LLM?},pdfsubject={Atlas table of contents}}
+\pagestyle{fancy}\fancyhf{}\fancyfoot[L]{\small What the Fuck Is Going On Inside an LLM? · 4.0}\fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.3pt}
 \setlength{\parindent}{0pt}\setlength{\parskip}{4pt}\setlength{\emergencystretch}{3em}
 \setlist[enumerate]{leftmargin=17mm,labelsep=3mm,itemsep=0.5pt,parsep=0pt,topsep=2pt}
 \interlinepenalty=10000\sloppy\begin{document}
-{\fontsize{27}{31}\selectfont\bfseries Атлас искусственного интеллекта\par}\vspace{8mm}
-{\Large Единое содержание\par}\vspace{5mm}
+{\fontsize{25}{29}\selectfont\bfseries What the Fuck Is Going On\\Inside an LLM?\par}\vspace{8mm}
+{\Large Атлас · единое содержание\par}\vspace{5mm}
 """.replace("FONT", str(FONT)), esc(summary).replace("\n\n", r"\par\vspace{3mm}")]
 for i, block in enumerate(blocks, 1):
     tex.append(r"\hyperlink{block" + str(i) + "}{" + esc(block["title"]) + r"}\par")
