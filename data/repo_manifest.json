@@ -1,0 +1,310 @@
+{
+  "version": "4.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 54,
+      "sha256": "9e10a016ac88ffe5b9fb2e40d0f99d88260cf685107755154534c9050a4ed9c8"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2084,
+      "sha256": "886886a1d478b6e83f9da65bd675e95501a118a0f9f4b6321ebf16ac3d023fa0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4614,
+      "sha256": "f36fb873607685133fc72d9ee158127b7d440460c6cfc96b6005a41ff7cebb46"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 2627,
+      "sha256": "61c203f83e2be4ebf46a730642524d3df82c8074261241de991a8468534e736f"
+    },
+    {
+      "path": "archive/chapter_builds/README.md",
+      "bytes": 596,
+      "sha256": "3b67d91ed7c15bc9f26b6784accad77c692d23658d828fdf2f5811f088c506d9"
+    },
+    {
+      "path": "archive/chapter_builds/agents/README.md",
+      "bytes": 1931,
+      "sha256": "2a66c5336b014803b24dc65d63bccb160efa4b407ae78be92292baade8be94fe"
+    },
+    {
+      "path": "archive/chapter_builds/agents/build_workspace.py",
+      "bytes": 9878,
+      "sha256": "38775856f74b94873d6d1f7bc015aeeff3d0052c618939a7cde34a47cb0c78ce"
+    },
+    {
+      "path": "archive/chapter_builds/agents/content.py",
+      "bytes": 113487,
+      "sha256": "dbb87dd4027f96fa54c3feaa3580d9ef9efa2e04294d12b1b7b80f9ec854800a"
+    },
+    {
+      "path": "archive/chapter_builds/agents/sources.json",
+      "bytes": 42408,
+      "sha256": "30d11b46eb10e54fe6e9919a2b089f40655f4cc97618044a4ec853b5adea5e55"
+    },
+    {
+      "path": "archive/chapter_builds/deep-research/README.md",
+      "bytes": 3409,
+      "sha256": "7e63c54cda594c10d4f1437f238eca870af226193def3dad17f12b3ba04c6b14"
+    },
+    {
+      "path": "archive/chapter_builds/deep-research/build_workspace.py",
+      "bytes": 10790,
+      "sha256": "ae1854d208af1ab71eeed3a75c8f9c289b129d2b125c784eb971ebaf62308466"
+    },
+    {
+      "path": "archive/chapter_builds/deep-research/content.py",
+      "bytes": 103316,
+      "sha256": "bf3f7a229c7909c32791b7088188f2ec7dea94d85d81d56f12141bb9b10b7182"
+    },
+    {
+      "path": "archive/chapter_builds/deep-research/sources.json",
+      "bytes": 27646,
+      "sha256": "d1f42a0e5773f4632f1506feedb5986dc8ffdc9bf4a3341693a8ad725379d9a1"
+    },
+    {
+      "path": "assets/fonts/LICENSE.md",
+      "bytes": 4492,
+      "sha256": "565b51e0f138efd3bf530184f51c342ca630157e49597821a51261baf32b07e0"
+    },
+    {
+      "path": "assets/fonts/README.md",
+      "bytes": 593,
+      "sha256": "ca4c5da2f6a9b0d4cfa3603662834ddff3bc331346948757b215bf0daab47440"
+    },
+    {
+      "path": "assets/fonts/SourceSerif4-Bold.otf",
+      "bytes": 251844,
+      "sha256": "f5fb9a7b1611353fdfebcf8b1e46c7d9108470f25999b841816d8b643b1856ff"
+    },
+    {
+      "path": "assets/fonts/SourceSerif4-It.otf",
+      "bytes": 169132,
+      "sha256": "f8062257f4693e438a8e317c9fe2b4393f0d4eed84d897edcbfd733c30a1c1a1"
+    },
+    {
+      "path": "assets/fonts/SourceSerif4-Regular.otf",
+      "bytes": 241392,
+      "sha256": "edf160d0d584deee8a3bb2c3371b2a7624ca63580fbe02c57c1f4c91e84d8787"
+    },
+    {
+      "path": "data/snapshots/v3_contents.json",
+      "bytes": 409607,
+      "sha256": "89e5105d0aa78afbfa3e3b51767bc6ee2590850af37a63d115972dc49ffae91b"
+    },
+    {
+      "path": "data/snapshots/v3_register.json",
+      "bytes": 206555,
+      "sha256": "58913a59cf204bf5febcc2c93ab0def69ec66903c4eddcdd6adf3c1e6a27eec1"
+    },
+    {
+      "path": "data/unified_topic_register.json",
+      "bytes": 309846,
+      "sha256": "ab6c5311aea0ec925735c9156a9f930a1d92667ca47c3a8d076bdb57e2d85f38"
+    },
+    {
+      "path": "data/verification.json",
+      "bytes": 643,
+      "sha256": "163f6beeb2b1dc016b2f3cd39ca54498f73fd310e41e111b74ce5635edf50a21"
+    },
+    {
+      "path": "docs/chapters/agents/chapter.md",
+      "bytes": 117255,
+      "sha256": "9e584e3067517960ca78277d946c6566a10978426436f0d65903ae77c9d7873e"
+    },
+    {
+      "path": "docs/chapters/agents/chapter.pdf",
+      "bytes": 212199,
+      "sha256": "8c9e1ac4ae02a8fad7ea3add2994766b2af11c49246c72d4eec9b3f86ee63d16"
+    },
+    {
+      "path": "docs/chapters/deep-research/chapter.md",
+      "bytes": 110252,
+      "sha256": "087195b9d06b1ee51273e79cbac8f5c41e7c6016c937427cbb0d2ecb09acd832"
+    },
+    {
+      "path": "docs/chapters/deep-research/chapter.pdf",
+      "bytes": 205087,
+      "sha256": "d6d94f4523e20c191b41bad274b2bebd175f403dda8172c936dd30199564d4c5"
+    },
+    {
+      "path": "docs/contents/atlas_contents.json",
+      "bytes": 505182,
+      "sha256": "471da7dce37e26aeab9d6c2cd37d1c54d8aca43fe710b728efe26e97f8856726"
+    },
+    {
+      "path": "docs/contents/atlas_contents.md",
+      "bytes": 130393,
+      "sha256": "75a86ce7fafb73a3b9324ef316c6aea9ee23dc9ee2b99d62ace317f20cd86fe8"
+    },
+    {
+      "path": "docs/contents/atlas_contents.pdf",
+      "bytes": 158741,
+      "sha256": "f123dfc5b0022500c012a84b5b25814a543ee8e39185e0af667fa93afa31712e"
+    },
+    {
+      "path": "docs/hardware/hardware_and_jev_sources.md",
+      "bytes": 5110,
+      "sha256": "dd76ac3c5f4ed9f0d6584e494601bc4a0b148194e1d9715ad4253da483404866"
+    },
+    {
+      "path": "docs/hardware/hardware_learning_route.md",
+      "bytes": 8328,
+      "sha256": "8c084061505d1a99a6b63f9afcd6511000bc9f132b53fd3348fdaa366759fbea"
+    },
+    {
+      "path": "docs/usage/usage_route.md",
+      "bytes": 84581,
+      "sha256": "dcef998239172874b192ec8a7bdc7243fd91504cc3214fa0e6f12067efed7787"
+    },
+    {
+      "path": "docs/usage/usage_route.pdf",
+      "bytes": 103936,
+      "sha256": "d78bb15c0e101f5fae7843d95c9c75583fc8d87a86ba53e2f12a24ea1e0af098"
+    },
+    {
+      "path": "docs/usage/usage_sources.json",
+      "bytes": 12136,
+      "sha256": "0bd157abf5ae87a48308d29b51d58c4de6ab245b966652969cbc9100f41f9689"
+    },
+    {
+      "path": "notes/00_readme.md",
+      "bytes": 5009,
+      "sha256": "0b7cfdc4b24c13d43d3c484e19be158865786f3ad32ccebab29a7a93332305dd"
+    },
+    {
+      "path": "notes/01_decisions.md",
+      "bytes": 19630,
+      "sha256": "de43271602e89adb20d204e531a185cff60cefd7f8151e73e68ef0716ec3e443"
+    },
+    {
+      "path": "notes/02_atlas_structure.md",
+      "bytes": 82419,
+      "sha256": "9e8a5898f138e5090ff48a67e1d293735f04d1e7418bbe661405afe570bf5ca2"
+    },
+    {
+      "path": "notes/03_profiles_review.md",
+      "bytes": 10051,
+      "sha256": "5806c60b92e54b1dd3454907aee9a270f533ef32a9461e062b6cca79e7ba7b2d"
+    },
+    {
+      "path": "notes/04_plan_changes.md",
+      "bytes": 12844,
+      "sha256": "abc897078ed0290d0ce0f929fa9f5c0c0566d595660d592842bcc996087d1af9"
+    },
+    {
+      "path": "notes/05_sources_by_topic.md",
+      "bytes": 23372,
+      "sha256": "efd2d31ce4756addd7566c38b075a37d40d7009f836dbeeace3ca5e08fcf4fa1"
+    },
+    {
+      "path": "notes/06_plugin_ideas.md",
+      "bytes": 6039,
+      "sha256": "5d25ae63e678034e3a97e1fd1f612d6553ec1be06daa89b01e48794afbe5040d"
+    },
+    {
+      "path": "notes/07_atlas_registry.json",
+      "bytes": 135482,
+      "sha256": "5b2fa3da4b54181edcca47ff206d2a9b06a6e019aca127e50fc928b6e6bbc14d"
+    },
+    {
+      "path": "notes/08_architecture_design.md",
+      "bytes": 29710,
+      "sha256": "21484ede2b07bbb9ae6826bb9ba80ffd15af43d961dd9038445544ebf6a48755"
+    },
+    {
+      "path": "notes/09_deepresearch_chapter_log.md",
+      "bytes": 11148,
+      "sha256": "c967303e4b51c6d52a9eafea6da6bf91cf889c737b9e2e137256433c9103722f"
+    },
+    {
+      "path": "notes/10_bibliography_design_discussion.md",
+      "bytes": 5503,
+      "sha256": "46cf24ceb9ceb1c1db21e70454ed8f0f96d9db3c6928da8c94ebb62b39b6a37c"
+    },
+    {
+      "path": "notes/11_bibliography_book_reference.md",
+      "bytes": 2248,
+      "sha256": "c4db49c0bd7996e4177bd03307909612b7eeefd776f549f28be3361c65d31c5e"
+    },
+    {
+      "path": "notes/12_atlas_design_standard.md",
+      "bytes": 4889,
+      "sha256": "3ea9e00da3871ca9e309ad4c9cfacbf270b6d5b3208408d004395b4e809dba73"
+    },
+    {
+      "path": "notes/13_agents_chapter_log.md",
+      "bytes": 5285,
+      "sha256": "b2b6b5c16e1353c696a7d97bf63c10d776b8a2d9d08200e353815af5f0639410"
+    },
+    {
+      "path": "notes/14_agents_coverage_and_next.md",
+      "bytes": 5323,
+      "sha256": "9db96df2e14b610f8a9c3700988951c22fc1341657bb48c37bf7ee1b791b3f4d"
+    },
+    {
+      "path": "notes/15_contents_review.md",
+      "bytes": 4203,
+      "sha256": "17a8b47bb5a98400c2272657affdd2cd20ff55fde32a4d86fb30a811aaad9bf6"
+    },
+    {
+      "path": "notes/16_representation_alignment_review.md",
+      "bytes": 13777,
+      "sha256": "4c7b5ca702bfb99c55b1f0de35fc12a0fdbbd353857231d103b7b69390d82259"
+    },
+    {
+      "path": "notes/17_conference_decisions.md",
+      "bytes": 1977,
+      "sha256": "e6d34d10657d47ecef2378159d0960460bf0265dff77e6b56a9a5949132c8360"
+    },
+    {
+      "path": "notes/18_consolidation_decisions.md",
+      "bytes": 1077,
+      "sha256": "e5bed8e30b19fcbecd9cfc47bb8f7b74930b9f802468f3dbf16c55a3642ec927"
+    },
+    {
+      "path": "notes/19_usage_decisions.md",
+      "bytes": 1322,
+      "sha256": "aac813bdee1893fbd4a8b8d16741f7f2bbc3d11ab0d1391d662ccc1ed8977417"
+    },
+    {
+      "path": "notes/20_hardware_and_jev_decisions.md",
+      "bytes": 3157,
+      "sha256": "199a194eb864da38715bf1fd635840b679ba0565167ebf548635b1732002142f"
+    },
+    {
+      "path": "notes/21_repository_decisions.md",
+      "bytes": 1666,
+      "sha256": "66bd6f6a6a06efa8a89f6a1cf21554b0dcca50b94035c1bf82aaf25b82ad049b"
+    },
+    {
+      "path": "research/conferences/papers.json",
+      "bytes": 48014,
+      "sha256": "ea90270ff56dabe1661e43024952c3ac57623e82e2155e9c70573411f374d800"
+    },
+    {
+      "path": "research/conferences/review_2021_2026.md",
+      "bytes": 60394,
+      "sha256": "f251773ea9e72172a2af82b8ef360305ccda64682c5151061241c317ff48980e"
+    },
+    {
+      "path": "research/conferences/review_2021_2026.pdf",
+      "bytes": 77884,
+      "sha256": "7ff405796d94a1cc33b27c70da0f7968db64f331dfa517de1394871e6e66202f"
+    },
+    {
+      "path": "src/build_contents.py",
+      "bytes": 44545,
+      "sha256": "c3eac09a9d23ea91b8eef9ea9106a942d5219fc240b04efdc01cce1c55c28bcc"
+    },
+    {
+      "path": "src/manifest.py",
+      "bytes": 1344,
+      "sha256": "5e70756fd4f7019d334e1ac990a39d88b443b24e29918c961b26d5d2eebaf0ea"
+    }
+  ]
+}

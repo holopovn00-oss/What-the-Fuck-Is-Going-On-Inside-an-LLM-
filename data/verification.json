@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-26",
+  "version": "4.0",
+  "previous_ids_preserved": 763,
+  "chapters": 82,
+  "blocks": 7,
+  "subtopics": 924,
+  "new_subtopics": 161,
+  "hardware_chapters": 12,
+  "hardware_subtopics": 139,
+  "pdf_pages": 37,
+  "pdf_text_ids_checked": [
+    "2.7.12",
+    "2.14.3",
+    "7.1.1",
+    "7.12.10"
+  ],
+  "pdf_visual_review": "All page contact sheets reviewed at 60 dpi; no clipping or sparse orphan page found",
+  "notes": [
+    "One historical A14 target is a method label rather than a numbered topic and is unchanged from v3",
+    "A full purchase compatibility matrix and empirical hardware runs remain future work"
+  ]
+}

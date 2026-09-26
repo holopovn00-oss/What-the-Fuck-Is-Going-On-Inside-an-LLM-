@@ -1,0 +1,386 @@
+{
+  "checked": "2026-09-12",
+  "sources": {
+    "agents": {
+      "author": "Erik Schluntz, Barry Zhang",
+      "title": "Building effective agents",
+      "ru": "Как создавать эффективных агентов",
+      "year": "2024",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "note": "Авторы различают заранее заданные процессы и системы, в которых модель выбирает следующие действия. На схемах разобраны цепочки, маршрутизация, параллельные ветви, координатор с исполнителями и цикл оценки с доработкой.",
+      "where": "Building blocks, workflows, and agents; Appendix 2 о проектировании инструментов.",
+      "kind": "Инженерная статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "multi": {
+      "author": "Anthropic",
+      "title": "How we built our multi-agent research system",
+      "ru": "Как мы построили многоагентную исследовательскую систему",
+      "year": "2025",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "note": "Производственный разбор системы с ведущим агентом и поисковыми исполнителями. Обсуждаются содержание поручения, разделение контекстов, сбор результатов, проверка цитат и восстановление после сбоев.",
+      "where": "Architecture overview for Research; разделы о промптах, инструментах и оценке.",
+      "kind": "Инженерная статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "cosci": {
+      "author": "Juraj Gottweis, Wei-Hung Weng, Alexander Daryin et al.",
+      "title": "Accelerating scientific discovery with Co-Scientist",
+      "ru": "Ускорение научных открытий с помощью Co-Scientist",
+      "year": "2026",
+      "url": "https://www.nature.com/articles/s41586-026-10644-y",
+      "note": "Система сочетает генерацию, рецензирование, ранжирование и развитие гипотез с участием исследователя. Статья связывает архитектуру с отдельными биомедицинскими проверками и позволяет проследить переход от кандидата к экспериментальной работе.",
+      "where": "Methods: Overview of Co-Scientist architecture; специализированные агенты; Expert-in-the-loop interactions. Nature 655, 487–496.",
+      "kind": "Рецензируемая статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "good": {
+      "author": "Greg Wilson, Jennifer Bryan, Karen Cranston et al.",
+      "title": "Good enough practices in scientific computing",
+      "ru": "Достаточно хорошие практики научных вычислений",
+      "year": "2017",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510",
+      "note": "Практическая организация вычислительного исследования: исходные данные, скрипты преобразований, структура проекта, версии и совместная работа. Показан способ связать повторяемый анализ с понятным устройством файлов.",
+      "where": "Data management; Project organization; Box 2 с runall; Keeping track of changes.",
+      "kind": "Практическая статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "ir": {
+      "author": "Christopher D. Manning, Prabhakar Raghavan, Hinrich Schütze",
+      "title": "Introduction to Information Retrieval",
+      "ru": "Введение в информационный поиск",
+      "year": "2008",
+      "url": "https://nlp.stanford.edu/IR-book/",
+      "note": "Учебник объясняет индексирование, ранжирование, оценку поиска и обратную связь по релевантности. Даёт язык для различения найденных документов, полезных документов и ещё не обнаруженной информации.",
+      "where": "Главы 6–9: векторная оценка, вычисление оценок, оценка качества, обратная связь и расширение запросов.",
+      "kind": "Учебник",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "react": {
+      "author": "Shunyu Yao, Jeffrey Zhao, Dian Yu et al.",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "ru": "ReAct: совместное использование рассуждения и действий в языковых моделях",
+      "year": "2022 / ICLR 2023",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "note": "Чередование рассуждения, действия и наблюдения позволяет пересматривать план после ответа инструмента. Примеры показывают, как обращение к внешней среде меняет последующий ход решения.",
+      "where": "Раздел о методе ReAct и примеры траекторий поиска ответов; сопоставить действие с полученным наблюдением.",
+      "kind": "Статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "storm": {
+      "author": "Yijia Shao, Yucheng Jiang, Theodore A. Kanell et al.",
+      "title": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+      "ru": "Помощь в написании энциклопедических статей с нуля с помощью LLM",
+      "year": "2024",
+      "url": "https://aclanthology.org/2024.naacl-long.347/",
+      "note": "STORM исследует подготовку статьи до собственно написания: поиск разных перспектив и разговоры с условными экспертами помогают собрать материал и построить план.",
+      "where": "§3 с устройством STORM; эксперименты и абляции перспектив и диалогов.",
+      "kind": "Рецензируемая статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "argus": {
+      "author": "Zhen Zhang, Liangcai Su, Zhuo Chen et al.",
+      "title": "Argus: Evidence Assembly for Scalable Deep Research Agents",
+      "ru": "Argus: сборка доказательств для масштабируемых исследовательских агентов",
+      "year": "2026, v3",
+      "url": "https://arxiv.org/abs/2605.16217v3",
+      "note": "Координатор ведёт граф свидетельств, обнаруживает пробелы и поручает исполнителям поиск; две роли обучаются отдельно.",
+      "where": "§2–3; анализ и ограничения §4.3–4.4; пример в приложении C.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "prov": {
+      "author": "Timothy Lebo, Satya Sahoo, Deborah McGuinness (eds.); W3C",
+      "title": "PROV-O: The PROV Ontology",
+      "ru": "PROV-O: онтология происхождения данных",
+      "year": "2013",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "note": "Стандарт задаёт сущности, действия и участников, а также отношения использования, порождения и происхождения. Его примеры позволяют представить цепь от документа через обработку к утверждению.",
+      "where": "§3.1 Starting Point Terms; §3.2 Expanded Terms; примеры связей wasDerivedFrom и wasGeneratedBy.",
+      "kind": "Стандарт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "alce": {
+      "author": "Tianyu Gao, Howard Yen, Jiatong Yu, Danqi Chen",
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "ru": "Генерация текста со ссылками на источники с помощью LLM",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2305.14627",
+      "note": "ALCE отдельно оценивает качество ответа и цитирования. Работа показывает, как проверять, поддерживают ли приведённые фрагменты утверждения и покрывают ли ссылки содержание ответа.",
+      "where": "Разделы об устройстве ALCE и оценке цитирования; примеры ответов и анализ ошибок.",
+      "kind": "Статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "mem": {
+      "author": "Charles Packer, Sarah Wooders, Kevin Lin et al.",
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "ru": "MemGPT: языковые модели как операционные системы",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2310.08560",
+      "note": "Предлагается управление обменом между ограниченным контекстом и внешней памятью. Команды памяти и события позволяют хранить больше сведений, чем помещается в одном запросе к модели.",
+      "where": "Раздел MemGPT и схемы иерархии памяти; примеры извлечения и обновления сведений.",
+      "kind": "Статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "temp": {
+      "author": "Temporal Technologies",
+      "title": "Workflow Execution; Activities",
+      "ru": "Исполнение процесса; действия с внешними эффектами",
+      "year": "документация, 2026",
+      "url": "https://docs.temporal.io/workflow-execution",
+      "note": "Документация объясняет длительно живущее исполнение процесса и отделение его логики от внешних операций. История событий позволяет возобновлять управление после сбоя; повторяемое действие требует собственного контроля повторов.",
+      "where": "Workflow Execution и связанная страница Activities: исполнение, повторные попытки и идемпотентность.",
+      "kind": "Документация",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "context": {
+      "author": "Anthropic",
+      "title": "Effective context engineering for AI agents",
+      "ru": "Эффективная инженерия контекста для ИИ-агентов",
+      "year": "2025",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "note": "Рассматриваются отбор информации для контекста, извлечение по требованию, сжатие истории, структурированные заметки и делегирование. Полезна связь между объёмом доступной памяти и тем, что модель видит в конкретном шаге.",
+      "where": "Context retrieval and agentic search; Context engineering for long-horizon tasks.",
+      "kind": "Инженерная статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "bayes": {
+      "author": "Daniel Kunin, Jingru Guo, Tyler Dae Devlin, Daniel Xiang",
+      "title": "Seeing Theory",
+      "ru": "Наглядная теория вероятностей",
+      "year": "2018",
+      "url": "https://seeing-theory.brown.edu/bayesian-inference/index.html",
+      "note": "Интерактивное введение показывает, как априорное распределение и правдоподобие наблюдения образуют апостериорное распределение. Изменяя параметры, можно увидеть, почему редкий положительный результат не всегда делает гипотезу убедительной.",
+      "where": "Bayesian Inference: Bayes’ Theorem; соответствующая глава PDF-учебника.",
+      "kind": "Интерактивный учебник",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "causal": {
+      "author": "Miguel A. Hernán, James M. Robins",
+      "title": "Causal Inference: What If",
+      "ru": "Причинный вывод: что, если",
+      "year": "2020",
+      "url": "https://miguelhernan.org/whatifbook",
+      "note": "Учебник вводит потенциальные исходы, рандомизированные и наблюдательные исследования, смешение и причинные графы. Объясняет, какие предпосылки нужны для перехода от наблюдаемого различия к эффекту вмешательства.",
+      "where": "Часть I: главы 1–3 о причинном эффекте и исследованиях; глава 7 о смешении.",
+      "kind": "Учебник",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "syco": {
+      "author": "Mrinank Sharma, Meg Tong, Tomasz Korbak et al.",
+      "title": "Towards Understanding Sycophancy in Language Models",
+      "ru": "К пониманию поддакивания в языковых моделях",
+      "year": "2023; обновление 2025",
+      "url": "https://arxiv.org/abs/2310.13548",
+      "note": "Авторы исследуют согласие моделей с позицией пользователя и роль оценок человеческих предпочтений. Экспериментальные задания помогают отделять убедительность формулировки от фактической обоснованности ответа.",
+      "where": "Эксперименты с пользовательскими убеждениями; анализ человеческих предпочтений и моделей предпочтений.",
+      "kind": "Статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "self": {
+      "author": "Jie Huang, Xinyun Chen, Swaroop Mishra et al.",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "ru": "Языковые модели пока не умеют надёжно исправлять рассуждения самостоятельно",
+      "year": "2023 / ICLR 2024",
+      "url": "https://arxiv.org/abs/2310.01798",
+      "note": "Проверяется внутренняя самокоррекция без внешней обратной связи. В изученных настройках повторный пересмотр ответа не обеспечивал стабильного улучшения и мог ухудшать результат.",
+      "where": "Определение intrinsic self-correction; экспериментальные протоколы и раздел об источниках обратной связи.",
+      "kind": "Статья",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "scientist": {
+      "author": "Yutaro Yamada, Robert Tjarko Lange, Cong Lu et al.",
+      "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+      "ru": "AI Scientist-v2: автоматизированное научное исследование через агентный поиск по дереву",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2504.08066",
+      "note": "Вычислительная система связывает гипотезу, экспериментальный код, запуск, анализ и подготовку рукописи. Менеджер экспериментов распределяет поиск по ветвям и использует результаты предыдущих попыток.",
+      "where": "Архитектура и progressive agentic tree search; описание экспериментальных стадий; репозиторий SakanaAI/AI-Scientist-v2.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "bench": {
+      "author": "Mingxuan Du, Benfeng Xu, Chiwei Zhu et al.",
+      "title": "DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents",
+      "ru": "DeepResearch Bench: комплексная оценка исследовательских агентов",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2506.11763",
+      "note": "Набор исследовательских задач оценивается по содержанию отчёта и работе с источниками. Эталонные материалы помогают формировать критерии качества; отдельный контур учитывает точность и полезность цитат.",
+      "where": "Методология RACE и FACT; организация задач и протокол оценки.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "bench2": {
+      "author": "Ruizhe Li, Mingxuan Du, Benfeng Xu et al.",
+      "title": "DeepResearch Bench II: Diagnosing Deep Research Agents via Rubrics from Expert Reports",
+      "ru": "DeepResearch Bench II: диагностика агентов по критериям из экспертных отчётов",
+      "year": "2026, v3",
+      "url": "https://arxiv.org/abs/2601.08536v3",
+      "note": "Мелкие проверяемые критерии извлекаются из экспертных материалов и проходят человеческую проверку. Раздельно оцениваются восстановление информации, анализ и представление результата.",
+      "where": "§3.1 — создание критериев; §4.3 — абляции; §5.2 — утечка исходной статьи; приложение E — промпты оценки.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "corral": {
+      "author": "Martiño Ríos-García, Nawaf Alampara, Chandan Gupta et al.",
+      "title": "AI scientists produce results without reasoning scientifically",
+      "ru": "ИИ-учёные получают результаты, не рассуждая научным образом",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2604.18805",
+      "note": "Исследование сравнивает успешность выполнения задач с использованием доказательств и пересмотром гипотез в траекториях агентов. Размечаются наблюдаемые признаки научного рассуждения в нескольких предметных областях.",
+      "where": "Results: Epistemological structure of agent reasoning; Methods §4.5 и §4.8; Discussion.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "stc": {
+      "author": "Yongjie Wang, Xinyue Zhang, Kunhong Yao et al.",
+      "title": "Search-Time Contamination in Deep Research Agents: Measuring Performance Inflation in Public Benchmark Evaluation",
+      "ru": "Загрязнение оценки исследовательских агентов во время поиска",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2606.05241",
+      "note": "Аннотация различает попадание в поиск метаданных теста, контекста тестового вопроса и готового ответа. Это полезная постановка риска, когда проверяемый агент ищет материалы в открытом интернете.",
+      "where": "Проверена аннотация и метаданные; подробный протокол и численные результаты здесь не пересказываются.",
+      "kind": "Препринт; проверка по аннотации",
+      "included_in_pdf": false,
+      "access": "abstract_and_metadata_only"
+    },
+    "rl": {
+      "author": "Richard S. Sutton, Andrew G. Barto",
+      "title": "Reinforcement Learning: An Introduction",
+      "ru": "Обучение с подкреплением: введение",
+      "year": "2018, 2nd ed.",
+      "url": "http://incompleteideas.net/book/the-book-2nd.html",
+      "note": "Учебник вводит агента, среду, награду, политику и функцию ценности. Через небольшие задачи объясняется, как оценивать последовательность решений, когда полезный результат возникает через несколько шагов.",
+      "where": "Главы 3–4: марковские процессы принятия решений и уравнения Беллмана; глава 13: градиенты политики.",
+      "kind": "Учебник",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "sr1": {
+      "author": "Bowen Jin, Hansi Zeng, Zhenrui Yue et al.",
+      "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+      "ru": "Search-R1: обучение рассуждению и поиску с подкреплением",
+      "year": "2025, v5",
+      "url": "https://arxiv.org/abs/2503.09516v5",
+      "note": "Поисковая система включается в среду обучения, а модель учится чередовать генерацию и поисковые вызовы. Токены полученных документов маскируются в соответствующей функции потерь, поскольку их не выбирала политика.",
+      "where": "§3.1–3.4 и приложение A: постановка RL, маскирование, цикл поиска и награда; §5.4 — абляция маскирования.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    },
+    "dspy": {
+      "author": "Omar Khattab, Arnav Singhvi, Paridhi Maheshwari et al.",
+      "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+      "ru": "DSPy: оптимизация конвейеров из декларативных вызовов языковых моделей",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2310.03714",
+      "note": "Вызовы модели описываются как модули с интерфейсами, а их композиция оптимизируется по заданной метрике. Примеры демонстрируют поиск полезных демонстраций и настройку цепочек на задачах рассуждения и поиска.",
+      "where": "Описание модели программирования, компиляции и два исследования применения. Не путать статью с текущим API.",
+      "kind": "Препринт",
+      "included_in_pdf": true,
+      "access": "primary_source_relevant_text_checked"
+    }
+  },
+  "sections": [
+    {
+      "section": 0,
+      "title": "Архитектура Deep Research и научного соисследователя",
+      "sources": [
+        "agents",
+        "multi",
+        "cosci",
+        "good"
+      ]
+    },
+    {
+      "section": 1,
+      "title": "1. Поиск, декомпозиция и остановка",
+      "sources": [
+        "ir",
+        "react",
+        "storm",
+        "argus"
+      ]
+    },
+    {
+      "section": 2,
+      "title": "2. Свидетельства, происхождение и цитаты",
+      "sources": [
+        "prov",
+        "alce",
+        "argus"
+      ]
+    },
+    {
+      "section": 3,
+      "title": "3. Оркестрация, инструменты и память",
+      "sources": [
+        "mem",
+        "temp",
+        "multi",
+        "context"
+      ]
+    },
+    {
+      "section": 4,
+      "title": "4. Гипотезы, критика и поддакивание",
+      "sources": [
+        "bayes",
+        "causal",
+        "syco",
+        "self"
+      ]
+    },
+    {
+      "section": 5,
+      "title": "5. Эксперимент и полный научный цикл",
+      "sources": [
+        "good",
+        "causal",
+        "scientist",
+        "cosci"
+      ]
+    },
+    {
+      "section": 6,
+      "title": "6. Как оценивать исследовательского агента",
+      "sources": [
+        "bench",
+        "alce",
+        "bench2",
+        "corral"
+      ]
+    },
+    {
+      "section": 7,
+      "title": "7. Обучение и улучшение управляющей политики",
+      "sources": [
+        "rl",
+        "sr1",
+        "dspy",
+        "argus"
+      ]
+    }
+  ]
+}
