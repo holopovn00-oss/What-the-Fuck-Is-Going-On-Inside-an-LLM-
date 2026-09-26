@@ -158,13 +158,13 @@
     },
     {
       "path": "docs/issues/01_hardware/README.md",
-      "bytes": 941,
-      "sha256": "714a4c4926d73daeff0ecaba7bf3fc53c370a96a24f12c7354ca2afe39953a7a"
+      "bytes": 1485,
+      "sha256": "148361e223045472e0a21b930c0e8946c761dd8f023bcb586cbf73d3fefec6ff"
     },
     {
       "path": "docs/issues/01_hardware/build_pdf.py",
-      "bytes": 2735,
-      "sha256": "d87358925391ef39c81fa151041239ae944ff5a7ee385736f6b2bbd4eb5cfafb"
+      "bytes": 140,
+      "sha256": "cb69a583a882d59ceb7562a7f131048e2c91e6846ecd03ac8ec725ccd50d1bdc"
     },
     {
       "path": "docs/issues/01_hardware/calculator.py",
@@ -178,13 +178,23 @@
     },
     {
       "path": "docs/issues/01_hardware/hardware_issue.pdf",
-      "bytes": 80239,
-      "sha256": "ab2a3a716f718e8eb0f92df15b9ec38f1b24871d58d07a5383ae682b6af56698"
+      "bytes": 97936,
+      "sha256": "8e12e77b7884a2f434c7fdc569611ae2fea7fade5963c2c4b99665830820e744"
+    },
+    {
+      "path": "docs/issues/01_hardware/requirements.txt",
+      "bytes": 15,
+      "sha256": "53fedf101db8c2e24562ca7d383c7af79a0e825728dbfd8f29a1f9563fe86d2b"
     },
     {
       "path": "docs/issues/01_hardware/review_log.md",
-      "bytes": 2274,
-      "sha256": "1ddb9356c08a15382c6f6537b298ef1f1d5bbc8eb63c578b131a9d4774155213"
+      "bytes": 3385,
+      "sha256": "c9e7598390b3e0d9036ce55f53afe1a921b38c423e537b88fd892435263bd06e"
+    },
+    {
+      "path": "docs/issues/01_hardware/typeset_book.py",
+      "bytes": 14492,
+      "sha256": "547f646f1b4569018d3f3a658500308a03c46d939b54406837a5510d0d2d60ca"
     },
     {
       "path": "docs/issues/01_hardware/workload_example.json",
@@ -330,6 +340,11 @@
       "path": "notes/23_hardware_issue_decisions.md",
       "bytes": 1307,
       "sha256": "a263beda55592e2db5b0ba94d8d2c46ca90eb00b07771afb429f530daefab201"
+    },
+    {
+      "path": "notes/24_hardware_layout_correction.md",
+      "bytes": 1847,
+      "sha256": "6b97a460776665e7703443ee781e5e4e1ff632312691e08cc2c6c9d5721e052d"
     },
     {
       "path": "research/conferences/papers.json",
