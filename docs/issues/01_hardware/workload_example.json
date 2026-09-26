@@ -1,0 +1,14 @@
+{
+  "label": "Учебный сценарий: 8B, 4-bit, один активный запрос",
+  "parameters": 8000000000,
+  "weight_bits": 4,
+  "layers": 32,
+  "kv_heads": 8,
+  "head_dim": 128,
+  "context_tokens": 4096,
+  "active_sequences": 1,
+  "kv_bytes_per_element": 2,
+  "vector_count": 150000,
+  "vector_dimensions": 1024,
+  "vector_bytes_per_element": 4
+}
