@@ -18,8 +18,8 @@
     },
     {
       "path": "STATUS.md",
-      "bytes": 3432,
-      "sha256": "efcf5127e9df920bdd72246f293c6e4c46dc50d396ddc4a5597ca97bf9c11f68"
+      "bytes": 3472,
+      "sha256": "d7a5a4864b3e6fcef054a4879af7b8e2934da0cb6cf6bbdeb12fdfc188c80c3b"
     },
     {
       "path": "archive/chapter_builds/README.md",
@@ -158,8 +158,13 @@
     },
     {
       "path": "docs/issues/01_hardware/README.md",
-      "bytes": 2077,
-      "sha256": "9bd38eb61facca899c0de90e5ec5fb2b4da8797057d4c50e402f40aafa6a69ce"
+      "bytes": 2540,
+      "sha256": "e45f53be4e92c3c0baf7949c69119127dceae69c8ebd50f88773c82542802b8b"
+    },
+    {
+      "path": "docs/issues/01_hardware/archive/rejected_1_1.pdf",
+      "bytes": 158229,
+      "sha256": "bca96d0419e4aa7a2d4633a8f494b533286c83fecbf470e09bc73ab649391353"
     },
     {
       "path": "docs/issues/01_hardware/build_pdf.py",
@@ -173,18 +178,23 @@
     },
     {
       "path": "docs/issues/01_hardware/hardware_content.py",
-      "bytes": 113230,
-      "sha256": "1c77e881198ba98f7198bcd6941dd76728b2f41c2c3105471f1bbaa1893eba0a"
+      "bytes": 113317,
+      "sha256": "e6918b2bb7dfe9204bc06ec1cf325700fd25ba05e64a58414f397ad0470a458b"
+    },
+    {
+      "path": "docs/issues/01_hardware/hardware_content_12.py",
+      "bytes": 85005,
+      "sha256": "88496a3278398d238128361e80494295cc3b0e15c293aacb8c39ae9ee93cd6f6"
     },
     {
       "path": "docs/issues/01_hardware/hardware_issue.md",
-      "bytes": 118560,
-      "sha256": "ed9673b0381d2fd478fcc52bb68038fc6ff9f0226b5ee053a3ac2903e2c38d36"
+      "bytes": 115339,
+      "sha256": "648c4f7d17dbf28c91d57086dd0711c5a818b7f28af0bc096f94c8802354d1c6"
     },
     {
       "path": "docs/issues/01_hardware/hardware_issue.pdf",
-      "bytes": 158229,
-      "sha256": "bca96d0419e4aa7a2d4633a8f494b533286c83fecbf470e09bc73ab649391353"
+      "bytes": 156548,
+      "sha256": "9780993de6df25d2483f71f561f670c0993b07401b5fae7be51d5c907b5c4041"
     },
     {
       "path": "docs/issues/01_hardware/requirements.txt",
@@ -192,14 +202,29 @@
       "sha256": "53fedf101db8c2e24562ca7d383c7af79a0e825728dbfd8f29a1f9563fe86d2b"
     },
     {
+      "path": "docs/issues/01_hardware/review_1_2.md",
+      "bytes": 8642,
+      "sha256": "a4127ef87edd72c5ef58c113f7cf47401c5a6dc57d534a6a44460de64bf66434"
+    },
+    {
       "path": "docs/issues/01_hardware/review_log.md",
-      "bytes": 8725,
-      "sha256": "2ec028ec901ef2e95747b110d1334214568ad5437e95af4c378a0b7cbedb0225"
+      "bytes": 11722,
+      "sha256": "20d90c70d6407faeee0cd00069921f9342df2efd843b89778c8f5035e889f71c"
+    },
+    {
+      "path": "docs/issues/01_hardware/review_rejected_1_1.md",
+      "bytes": 7179,
+      "sha256": "d423226d3c0cc9c6f6a2bafd5a8de1f88e33d8ba47f5e10c48f83b6f2c1a1568"
+    },
+    {
+      "path": "docs/issues/01_hardware/source_catalog.py",
+      "bytes": 25003,
+      "sha256": "19d80262ef20d6780aa031e6e5bc48b16c1abcee79370401ca82ad4a7cb86ddd"
     },
     {
       "path": "docs/issues/01_hardware/sources.json",
-      "bytes": 29006,
-      "sha256": "d35f96fbf24b3c7b4279706d295bd14760932fa482d51e895136da260bf6132e"
+      "bytes": 28955,
+      "sha256": "57a5bda500d93cbe809a0edf353672ba2425cb412b4f33eacc4bbeea39c3eec3"
     },
     {
       "path": "docs/issues/01_hardware/typeset_book.py",
@@ -208,8 +233,8 @@
     },
     {
       "path": "docs/issues/01_hardware/typeset_reference.py",
-      "bytes": 12946,
-      "sha256": "8126176ec60cacf41bf062a8f39ea5d140ce5e42314932d8fb11525ab56ce75e"
+      "bytes": 12964,
+      "sha256": "b9bd4a7ab8ec6c2fecc35e2bd5babb01a7a811533563ec0ab359974f295244e1"
     },
     {
       "path": "docs/issues/01_hardware/workload_example.json",
@@ -218,8 +243,8 @@
     },
     {
       "path": "docs/issues/README.md",
-      "bytes": 348,
-      "sha256": "1d96ce1f8c1693c545d58c1855d22202e472c25ef11e071860be238c29e9360e"
+      "bytes": 498,
+      "sha256": "360b2eed8049f1e5497f83360aa16a3efa15d29d2ab60d6cfcd2206d160cdd47"
     },
     {
       "path": "docs/standards/atlas_golden_gate/GOLDEN_GATE.md",

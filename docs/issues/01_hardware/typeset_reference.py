@@ -12,7 +12,7 @@ import subprocess
 import sys
 import tempfile
 
-from hardware_content import C, S
+from hardware_content_12 import C, S
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -21,9 +21,9 @@ TARGET = HERE / "hardware_issue.pdf"
 MARKDOWN = HERE / "hardware_issue.md"
 SOURCE_INDEX = HERE / "sources.json"
 RUNNING = [
-    "Железо для ИИ", "Архитектура узла", "Память модели",
-    "Обучение и дообучение", "Инференс", "Данные и RAG",
-    "Локальные модели", "Выбор компонентов",
+    "Железо для ИИ", "Путь данных", "Веса и KV",
+    "Шаг обучения", "Очередь и инференс", "Корпус и индекс",
+    "Локальная модель", "Выбор машины",
 ]
 GROUPS = ["Вводные работы", "Специализированные работы", "Фронтир исследований"]
 
@@ -102,6 +102,7 @@ def markdown(text, references):
     text = text.replace(r"\(", "$" ).replace(r"\)", "$" )
     text = text.replace(r"\[", "\n$$\n").replace(r"\]", "\n$$\n")
     text = text.replace(r"\,", " ").replace(r"\par", "\n\n")
+    text = text.replace(r"\%", "%")
     return text.strip()
 
 
@@ -145,7 +146,7 @@ def build():
             [S[k]["group"] for k in chapter["refs"]], key=GROUPS.index)
 
     parts = [PREAMBLE]
-    md = ["# Железо для ИИ: от задачи к конфигурации\n\nАтлас · учебный выпуск к блоку VII · 26 сентября 2026\n\n"
+    md = ["# Железо для ИИ: от задачи к конфигурации\n\nАтлас · учебный выпуск к блоку VII · 27 сентября 2026\n\n"
           "Восемь частей по темам 7.1–7.12. Формулы и числа являются учебными оценками; точные модели и устройства проверяются опытом.\n"]
     for index, chapter in enumerate(C):
         refs = chapter["refs"]
@@ -212,7 +213,7 @@ def build():
         shutil.copy(work / "typeset.pdf", TARGET)
     MARKDOWN.write_text("\n".join(md), encoding="utf-8")
     SOURCE_INDEX.write_text(json.dumps({
-        "checked": "2026-09-26", "scope": "Selected official documentation and primary research; article text and examples reviewed where noted.",
+        "checked": "2026-09-27", "scope": "Selected official documentation and primary research; article text and examples reviewed where noted.",
         "sources": S,
         "sections": [{"title": c["title"], "sources": c["refs"]} for c in C],
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

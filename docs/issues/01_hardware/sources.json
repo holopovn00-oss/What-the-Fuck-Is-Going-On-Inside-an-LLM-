@@ -1,5 +1,5 @@
 {
-  "checked": "2026-09-26",
+  "checked": "2026-09-27",
   "scope": "Selected official documentation and primary research; article text and examples reviewed where noted.",
   "sources": {
     "cuda": {
@@ -82,12 +82,12 @@
     "llama_quant": {
       "author": "ggml-org",
       "year": "документация, 2026",
-      "title": "Model files and quantization in llama.cpp",
-      "ru": "Файлы моделей и квантование в llama.cpp",
-      "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/models.md",
+      "title": "Quantizing models in llama.cpp",
+      "ru": "Квантование моделей в llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md",
       "kind": "Документация и код",
-      "note": "Описаны форматы моделей и варианты запуска. Обозначение четырёхбитной квантизации относится к конкретной схеме блоков и метаданных, поэтому размер файла не обязан равняться идеальным четырём битам на параметр.",
-      "where": "Разделы о GGUF, quantization и loading; сравнить размер файлов одинакового checkpoint в двух форматах.",
+      "note": "Документирует превращение GGUF-файла с весами высокой точности в конкретный тип квантования и способы оценки потерь качества. Обозначение Q4 не определяет в одиночку ни точный размер, ни применимость результата к собственной задаче.",
+      "where": "Вводный раздел и таблица типов квантования; сравнить размер двух файлов одного checkpoint и результат на отложенных вопросах.",
       "group": "Специализированные работы"
     },
     "fsdp": {
@@ -311,16 +311,16 @@
       ]
     },
     {
-      "title": "1. Архитектура узла и иерархия памяти",
+      "title": "1. Путь данных и узкое место",
       "sources": [
         "cuda",
         "best",
-        "roof",
-        "flash"
+        "accelerate",
+        "roof"
       ]
     },
     {
-      "title": "2. Сколько памяти требует модель",
+      "title": "2. Веса, KV и конкурентность",
       "sources": [
         "hf_cache",
         "accelerate",
@@ -329,7 +329,7 @@
       ]
     },
     {
-      "title": "3. Обучение и дообучение: от узла к кластеру",
+      "title": "3. Шаг обучения и кластер",
       "sources": [
         "fsdp",
         "nccl",
@@ -338,7 +338,7 @@
       ]
     },
     {
-      "title": "4. Инференс: от одного запроса к сервису",
+      "title": "4. Очередь и инференс",
       "sources": [
         "vllm",
         "benchmark",
@@ -347,7 +347,7 @@
       ]
     },
     {
-      "title": "5. Данные, индексы и базы для RAG",
+      "title": "5. Корпус, индекс и копии",
       "sources": [
         "irbook",
         "pgvector",
@@ -356,7 +356,7 @@
       ]
     },
     {
-      "title": "6. Локальные модели: от SLM до LLM",
+      "title": "6. Локальная модель: от SLM до LLM",
       "sources": [
         "cards",
         "llama",
@@ -365,7 +365,7 @@
       ]
     },
     {
-      "title": "7. Выбор компонентов и контрольный практикум",
+      "title": "7. Выбор и проверка машины",
       "sources": [
         "cap",
         "prof",
