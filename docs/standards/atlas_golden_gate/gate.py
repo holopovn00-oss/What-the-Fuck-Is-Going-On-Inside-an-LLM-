@@ -160,9 +160,9 @@ def check_pdf(path: Path, units: int) -> dict:
         "units_expected": units,
         "structural_result": "pass" if not issues else "fail",
         "issues": issues,
-        "editorial_result": "not_reviewed",
-        "user_approval": "pending",
-        "accepted": False
+        "editorial_result": "not_determined_by_structural_check",
+        "user_approval": "not_determined_by_structural_check",
+        "accepted": None
     }
 
 
@@ -205,8 +205,8 @@ def main() -> int:
     if args.reference:
         print("ИСХОДНЫЙ ЭТАЛОН: SHA-256 подтверждён.")
     else:
-        print("ИТОГОВЫЙ ДОПУСК: ЗАБЛОКИРОВАН. Требуются редакционная "
-              "проверка по REVIEW_FORM.md и решение пользователя.")
+        print("ЭТО ТОЛЬКО СТРУКТУРНАЯ ПРОВЕРКА. Редакторский и пользовательский "
+              "вердикты определяются отдельно; код 2 не означает отклонение.")
     if result["issues"]:
         return 1
     return 0 if args.reference else 2

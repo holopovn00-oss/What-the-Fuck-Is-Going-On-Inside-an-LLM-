@@ -49,11 +49,11 @@ source('accelerate', 'Hugging Face', 'документация, 2026', 'Big Mode
        'https://huggingface.co/docs/accelerate/usage_guides/big_modeling', 'Документация',
        'Разъясняет dispatch весов между GPU, RAM и диском. Такая выгрузка может сделать запуск возможным, но пропускная способность пути передачи меняет практическую скорость.',
        'Big Model Inference и описание device map; различить факт загрузки и измеренную скорость.', 'Вводные работы')
-source('llama_quant', 'ggml-org', 'документация, 2026', 'Quantizing models in llama.cpp',
-       'Квантование моделей в llama.cpp',
-       'https://github.com/ggml-org/llama.cpp/blob/master/tools/quantize/README.md', 'Документация и код',
-       'Документирует превращение GGUF-файла с весами высокой точности в конкретный тип квантования и способы оценки потерь качества. Обозначение Q4 не определяет в одиночку ни точный размер, ни применимость результата к собственной задаче.',
-       'Вводный раздел и таблица типов квантования; сравнить размер двух файлов одного checkpoint и результат на отложенных вопросах.', 'Специализированные работы')
+source('llama_quant', 'ggml-org', 'документация, 2026', 'Model files and quantization in llama.cpp',
+       'Файлы моделей и квантование в llama.cpp',
+       'https://github.com/ggml-org/llama.cpp/blob/master/docs/models.md', 'Документация и код',
+       'Описаны форматы моделей и варианты запуска. Обозначение четырёхбитной квантизации относится к конкретной схеме блоков и метаданных, поэтому размер файла не обязан равняться идеальным четырём битам на параметр.',
+       'Разделы о GGUF, quantization и loading; сравнить размер файлов одинакового checkpoint в двух форматах.', 'Специализированные работы')
 source('fsdp', 'PyTorch', 'документация, 2026', 'Getting Started with Fully Sharded Data Parallel (FSDP2)',
        'Полное шардирование параметров, градиентов и оптимизатора',
        'https://docs.pytorch.org/tutorials/intermediate/FSDP_tutorial.html', 'Документация',
