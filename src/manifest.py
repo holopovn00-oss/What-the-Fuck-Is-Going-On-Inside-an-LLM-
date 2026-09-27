@@ -28,7 +28,7 @@ def inventory():
 
 
 if __name__ == "__main__":
-    actual = {"version": "4.0", "files": inventory()}
+    actual = {"version": "4.1", "files": inventory()}
     if sys.argv[1:] == ["--write"]:
         MANIFEST.write_text(json.dumps(actual, ensure_ascii=False, indent=2) + "\n")
         print(f"Recorded {len(actual['files'])} files")

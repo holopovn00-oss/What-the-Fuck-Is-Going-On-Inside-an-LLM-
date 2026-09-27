@@ -1,0 +1,114 @@
+{
+  "checked": "2026-09-27",
+  "scope": "Official model card, manufacturer specifications, memory and PEFT documentation; QLoRA abstract. Build feasibility is an editorial inference awaiting a live test.",
+  "sources": {
+    "hfmem": {
+      "author": "Hugging Face",
+      "year": "документация, 2026",
+      "title": "GPU memory usage",
+      "ru": "Расход памяти GPU при обучении",
+      "url": "https://huggingface.co/docs/transformers/model_memory_anatomy",
+      "kind": "Документация",
+      "note": "Типичный mixed precision с AdamW разбит на две копии весов, градиенты, состояния оптимизатора, активации и временные буферы. Указанные 18 байт на параметр относятся к конкретному способу полного обучения.",
+      "where": "Tensors, activations и temporary tensors: сложить 6 + 8 + 4 байт и указать исключённые расходы.",
+      "group": "Вводные работы"
+    },
+    "gptoss": {
+      "author": "OpenAI",
+      "year": "2025",
+      "title": "gpt-oss model card",
+      "ru": "Техническая карточка моделей gpt-oss",
+      "url": "https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf",
+      "kind": "Технический отчёт",
+      "note": "Для gpt-oss-20b приведены 20,9B общих, 3,6B активных параметров и 12,8 GiB файла checkpoint в MXFP4. Указана возможность запуска в системе с 16 GB памяти. Это частный MoE пример, а не обещание для любой плотной 20B.",
+      "where": "Раздел 2, таблица 1: различить общие, активные параметры и полный размер файла.",
+      "group": "Специализированные работы"
+    },
+    "qlora": {
+      "author": "Dettmers, T. и др.",
+      "year": "2023",
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "ru": "QLoRA: адаптация поверх квантизованной замороженной базы",
+      "url": "https://arxiv.org/abs/2305.14314",
+      "kind": "NeurIPS",
+      "note": "База заморожена и квантизована, а градиенты обновляют низкоранговые адаптеры. Для отдельного checkpoint всё ещё нужны измерения пиков активаций, временных буферов и поддержки слоёв.",
+      "where": "§3 о NF4, double quantization и paged optimizers; восстановить память одного шага.",
+      "group": "Специализированные работы"
+    },
+    "peft": {
+      "author": "Hugging Face",
+      "year": "документация, 2026",
+      "title": "Quantization with PEFT",
+      "ru": "Квантизация базы и обучение адаптеров PEFT",
+      "url": "https://huggingface.co/docs/peft/developer_guides/quantization",
+      "kind": "Документация",
+      "note": "Показывает практический путь 4-bit загрузки модели и обучения LoRA. Пример доказывает существование метода, но не вместимость произвольной 20B на 16 GiB VRAM.",
+      "where": "Пример загрузки 4-bit и prepare_model_for_kbit_training: выполнить forward, backward, шаг оптимизатора.",
+      "group": "Специализированные работы"
+    },
+    "gpu16": {
+      "author": "NVIDIA",
+      "year": "спецификация, 2026",
+      "title": "GeForce RTX 5080 specifications",
+      "ru": "Характеристики GeForce RTX 5080",
+      "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/",
+      "kind": "Спецификация",
+      "note": "Референс имеет 16 GB GDDR7, TGP 360 W и рекомендацию системного БП 850 W для оговорённой конфигурации. Разъём и размеры партнёрской карты сверяются отдельно.",
+      "where": "Memory Specs, Card Dimensions, Thermal and Power Specs; повторить сверку у производителя платы.",
+      "group": "Вводные работы"
+    },
+    "gpu24": {
+      "author": "NVIDIA",
+      "year": "спецификация, 2026",
+      "title": "GeForce RTX 4090 specifications",
+      "ru": "Характеристики GeForce RTX 4090",
+      "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/",
+      "kind": "Спецификация",
+      "note": "Референсная карта имеет 24 GB памяти, TGP 450 W и рекомендацию системы от 850 W для приведённой производителем конфигурации. У б/у карты состояние и условия возврата проверяются отдельно.",
+      "where": "Memory Specs и Power Specs; сопоставить артикул с карточкой продавца.",
+      "group": "Специализированные работы"
+    },
+    "gpu32": {
+      "author": "NVIDIA",
+      "year": "спецификация, 2026",
+      "title": "GeForce RTX 5090 specifications",
+      "ru": "Характеристики GeForce RTX 5090",
+      "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+      "kind": "Спецификация",
+      "note": "Референсная карта имеет 32 GB GDDR7, TGP 575 W и рекомендацию системы от 1000 W при оговорённом составе ПК. Большая память не обещает низкую задержку при многопользовательской работе.",
+      "where": "Memory Specs и Power Specs; отдельно проверить габариты и кабель конкретной карты.",
+      "group": "Специализированные работы"
+    },
+    "bench": {
+      "author": "vLLM",
+      "year": "документация, 2026",
+      "title": "Benchmark CLI",
+      "ru": "Инструмент измерения сервера vLLM",
+      "url": "https://docs.vllm.ai/en/latest/benchmarking/cli/",
+      "kind": "Документация",
+      "note": "Описывает генератор нагрузки и задержки TTFT, TPOT, throughput. На нём можно сравнить одно и двадцать активных обращений, если checkpoint, длины запросов и настройки сервера сохранены.",
+      "where": "Benchmark serving: составить два сопоставимых опыта и записать p95 и пик VRAM.",
+      "group": "Специализированные работы"
+    }
+  },
+  "sections": [
+    {
+      "title": "20B: четыре разных режима работы",
+      "sources": [
+        "hfmem",
+        "gptoss",
+        "qlora",
+        "peft"
+      ]
+    },
+    {
+      "title": "Три сборки и приёмка машины",
+      "sources": [
+        "gpu16",
+        "gpu24",
+        "gpu32",
+        "bench"
+      ]
+    }
+  ]
+}
